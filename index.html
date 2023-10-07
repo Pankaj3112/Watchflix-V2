@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchFlix</title>
+    <meta name="title" content="WatchFlix">
+    <meta name="description" content="WatchFlix is an app for streaming movies made by Satyam Virat">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- Font Link if u like -->
+
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Custom JS Link -->
+    <script src="./assets/js/global.js" defer></script>
+    <script src="./assets/js/index.js" type="module"></script>
+
+    <!-- Font Awesome link for icons/svg -->
+    <script src="https://kit.fontawesome.com/1d176c0d0a.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.jpg" width="150" height="30" alt="WatchFlix Home" >
+        </a>
+
+        <div class="search-box" data-search-box>
+            <div class="search-wrapper" data-search-wrapper>
+                <input type="text" name="search" placeholder="Search Movies ..." class="search-field" data-search-field>
+                <i class="fa-solid fa-magnifying-glass leading-icon"></i>
+            </div>
+
+            <button class="search-btn" data-search-toggler>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <button class="search-btn" data-search-toggler data-menu-close>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button class="menu-btn" data-menu-btn data-menu-toggler>
+            <!-- menu open -->
+            <i class="fa-solid fa-ellipsis-vertical menu"></i>
+            <!-- menu close -->
+            <i class="fa-solid fa-ellipsis fa-spin close"></i>
+
+        </button>
+        
+    </header>
+
+
+    <!-- Sidebar -->
+    <nav class="sidebar" data-sidebar></nav>
+    
+    <div class="overlay" data-overlay data-menu-toggler>
+    </div>
+
+    <article class="container" data-page-content>
+
+        <!-- Banner -->
+        <!-- Popular movies -->
+        <section class="banner">
+            
+            <!-- popular movies and thier data from slider -->
+            <div class="banner-slider">
+
+                <div class="slider-item active" data-slider-item>
+                    <img src="./assets/images/slider-banner.jpg" alt="Movie  Title" class="img-cover" loading="eager">
+
+
+                    <div class="banner-content">
+                        <h2 class="heading">
+                            The Last Wish
+                        </h2>
+
+                        <div class="meta-list">
+                            <div class="meta-item">2022</div>
+
+                            <div class="meta-item card-badge">6.7</div>
+                        </div>
+
+                        <p class="genre">Animation, Action, Adventure</p>
+
+                        <p class="banner-text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, minus cumque officiis maxime necessitatibus tempore earum dicta labore sint, facere porro. Aliquam accusantium repudiandae exercitationem ullam iusto maxime ut. Error?
+                        </p>
+                        <a href="./detail.html" class="btn">
+                            <i class="fa-regular fa-circle-play fa-xl"></i>
+                            <span class="span">Watch Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slider-item " data-slider-item>
+                    <img src="./assets/images/slider-banner.jpg" alt="Movie  Title" class="img-cover" loading="eager">
+
+                    <span class="fav">
+                        <i class="fa-regular fa-heart fav-icon"></i>
+                    </span>
+                    
+                    <div class="banner-content">
+                        <h2 class="heading">
+                            The Last Wish
+                        </h2>
+
+                        <div class="meta-list">
+                            <div class="meta-item">2022</div>
+
+                            <div class="meta-item card-badge">6.7</div>
+                        </div>
+
+                        <p class="genre">Animation, Action, Adventure</p>
+
+                        <p class="banner-text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, minus cumque officiis maxime necessitatibus tempore earum dicta labore sint, facere porro. Aliquam accusantium repudiandae exercitationem ullam iusto maxime ut. Error?
+                        </p>
+                        <a href="./detail.html" class="btn">
+                            <i class="fa-regular fa-circle-play fa-xl"></i>
+                            
+                            <span class="span">Watch Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slider-item " data-slider-item>
+                    <img src="./assets/images/slider-banner.jpg" alt="Movie  Title" class="img-cover" loading="eager">
+
+                    <span class="fav">
+                        <i class="fa-regular fa-heart fav-icon"></i>
+                    </span>
+
+                    <div class="banner-content">
+                        <h2 class="heading">
+                            The Last Wish
+                        </h2>
+
+                        <div class="meta-list">
+                            <div class="meta-item">2022</div>
+
+                            <div class="meta-item card-badge">6.7</div>
+                        </div>
+
+                        <p class="genre">Animation, Action, Adventure</p>
+
+                        <p class="banner-text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, minus cumque officiis maxime necessitatibus tempore earum dicta labore sint, facere porro. Aliquam accusantium repudiandae exercitationem ullam iusto maxime ut. Error?
+                        </p>
+                        <a href="./detail.html" class="btn">
+                            <i class="fa-regular fa-circle-play fa-xl"></i>
+                            
+                            <span class="span">Watch Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slider-item " data-slider-item>
+                    <img src="./assets/images/slider-banner.jpg" alt="Movie  Title" class="img-cover" loading="eager">
+
+                    <span class="fav">
+                        <i class="fa-regular fa-heart fav-icon"></i>
+                    </span>
+                    
+                    <div class="banner-content">
+                        <h2 class="heading">
+                            The Last Wish
+                        </h2>
+
+                        <div class="meta-list">
+                            <div class="meta-item">2022</div>
+
+                            <div class="meta-item card-badge">6.7</div>
+                        </div>
+
+                        <p class="genre">Animation, Action, Adventure</p>
+
+                        <p class="banner-text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, minus cumque officiis maxime necessitatibus tempore earum dicta labore sint, facere porro. Aliquam accusantium repudiandae exercitationem ullam iusto maxime ut. Error?
+                        </p>
+                        <a href="./detail.html" class="btn">
+                            <i class="fa-regular fa-circle-play fa-xl"></i>
+                            
+                            <span class="span">Watch Now</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slider for popular movies selection-->
+            <div class="slider-control">
+                <div class="control-inner">
+
+                    <button class="poster-box slider-item active">
+                        <img src="./assets/images/slider-control.jpg" loading="lazy" draggable="false" alt="Slide to movie" class="img-cover">
+                    </button>
+                    <button class="poster-box slider-item">
+                        <img src="./assets/images/slider-control.jpg" loading="lazy" draggable="false" alt="Slide to movie" class="img-cover">
+                    </button><button class="poster-box slider-item ">
+                        <img src="./assets/images/slider-control.jpg" loading="lazy" draggable="false" alt="Slide to movie" class="img-cover">
+                    </button><button class="poster-box slider-item">
+                        <img src="./assets/images/slider-control.jpg" loading="lazy" draggable="false" alt="Slide to movie" class="img-cover">
+                    </button>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Movie List -->
+        <!-- For upcoming movies -->
+        <section class="movie-list">
+            <div class="title-wrapper">
+                <h3 class="title-large">Upcoming Movies</h3>
+            </div>
+            
+            <div class="slider-list">
+                <div class="slider-inner">
+
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="./assets/images/slider-control.jpg" class="img-cover" alt="#Movie Title">
+                            <span class="fav">
+                                <i class="fa-regular fa-heart fav-icon"></i>
+                            </span>
+                        </figure>
+                        <h4 class="title">Push Boots</h4>
+
+                        <div class="meta-list">
+
+                            <div class="meta-item">
+                                <img width="24" height="20" src="https://img.icons8.com/3d-fluency/94/star.png" loading="lazy" alt="rating"/>
+
+                                <span class="span">8.1</span>
+                            </div>
+
+                            <div class="card-badge">2022</div>
+                        </div>
+
+                        <a href="./detail.html" class="card-btn" title="Puss Movie"></a>
+                    </div>
+
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="./assets/images/slider-control.jpg" class="img-cover" alt="#Movie Title">                            
+                            <span class="fav">
+                                <i class="fa-regular fa-heart fav-icon"></i>
+                            </span>
+                        </figure>
+                        <h4 class="title">Push Boots</h4>
+
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img width="24" height="20" src="https://img.icons8.com/3d-fluency/94/star.png" loading="lazy" alt="rating"/>
+
+                                <span class="span">8.1</span>
+                            </div>
+
+                            <div class="card-badge">2022</div>
+                        </div>
+
+                        <a href="./detail.html" class="card-btn" title="Puss Movie"></a>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="./assets/images/slider-control.jpg" class="img-cover" alt="#Movie Title">                            
+                            <span class="fav">
+                                <i class="fa-regular fa-heart fav-icon"></i>
+                            </span>
+                        </figure>
+                        <h4 class="title">Push Boots</h4>
+
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img width="24" height="20" src="https://img.icons8.com/3d-fluency/94/star.png" loading="lazy" alt="rating"/>
+
+                                <span class="span">8.1</span>
+                            </div>
+
+                            <div class="card-badge">2022</div>
+                        </div>
+
+                        <a href="./detail.html" class="card-btn" title="Puss Movie"></a>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="./assets/images/slider-control.jpg" class="img-cover" alt="#Movie Title">                            
+                            <span class="fav">
+                                <i class="fa-regular fa-heart fav-icon"></i>
+                            </span>
+                        </figure>
+                        <h4 class="title">Push Boots</h4>
+
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img width="24" height="20" src="https://img.icons8.com/3d-fluency/94/star.png" loading="lazy" alt="rating"/>
+
+                                <span class="span">8.1</span>
+                            </div>
+
+                            <div class="card-badge">2022</div>
+                        </div>
+
+                        <a href="./detail.html" class="card-btn" title="Puss Movie"></a>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="./assets/images/slider-control.jpg" class="img-cover" alt="#Movie Title">                            
+                            <span class="fav">
+                                <i class="fa-regular fa-heart fav-icon"></i>
+                            </span>
+                        </figure>
+                        <h4 class="title">Push Boots</h4>
+
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img width="24" height="20" src="https://img.icons8.com/3d-fluency/94/star.png" loading="lazy" alt="rating"/>
+
+                                <span class="span">8.1</span>
+                            </div>
+
+                            <div class="card-badge">2022</div>
+                        </div>
+
+                        <a href="./detail.html" class="card-btn" title="Puss Movie"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+    
+</body>
+</html>

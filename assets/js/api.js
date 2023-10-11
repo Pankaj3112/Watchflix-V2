@@ -1,7 +1,7 @@
 'use strict';
 
 const apikey = '53fb11ff';
-const imageBaseURL = 'https://img.omdbapi.com/';
+const imageBaseURL = 'https://img.omdbapi.com/?';
 const baseURL = "http://www.omdbapi.com/?r=json"
 
 // fetch data from server and pass the result in JSON format

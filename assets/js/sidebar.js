@@ -3,15 +3,35 @@
 import { apikey, getMovieData } from "./api.js";
 
 export function sidebar() {
+
+    // Fetch all according to type: movie, series, episodes
     const categoryList = {};
+    const category = ['movie', 'series', 'episode'];
 
-    getMovieData(`https://www.omdbapi.com/?apikey=${apikey}&r=json&type=movie&s=abc`, function ({ Search }) {
-        for (const { Type, Title } of Search) {
-            categoryList[Type] = Title;
-        }
-
+    (async () => {
+        await Promise.all(category.map(async (Type) => {
+            const { Search } = await new Promise((resolve) => {
+                getMovieData(`https://www.omdbapi.com/?apikey=${apikey}&r=json&type=${Type}&s=abc`, (data) => resolve(data));
+            });
+    
+            if (Search && Search.length > 0) {
+                categoryList[Type] = Search[0].Type;
+            }
+        }));
+    
         typeLink();
-    });
+        console.log(categoryList);
+    })();
+
+    // getMovieData(`https://www.omdbapi.com/?apikey=${apikey}&r=json&type=series&s=abc`, function ({ Search }) {
+    //     console.log(Search);
+    //     for (const { Type, Title } of Search) {
+    //         categoryList[Type] = Title;
+    //     }
+
+    //     typeLink();
+    // });
+    // console.log(categoryList);
 
     const sidebarInner = document.createElement("div");
     sidebarInner.classList.add("sidebar-inner");
@@ -20,8 +40,6 @@ export function sidebar() {
 
         <div class="sidebar-list">
             <p class="title">Category</p>
-            <a href="./movie-list.html" data-menu-close class="sidebar-link">Movie</a>
-            <a href="./movie-list.html" data-menu-close class="sidebar-link">Series</a>
             <a href="./movie-list.html" data-menu-close class="sidebar-link">Episode</a>
         </div>
 
@@ -42,7 +60,8 @@ export function sidebar() {
             link.setAttribute("href", "./movie-list.html");
             link.setAttribute("menu-close", "");
             // link.setAttribute("onclick", `getMoviesList("with_type=${Type}", "${Title}")`);
-            link.textContent = Title;
+            link.textContent = Title.charAt(0).toUpperCase() + Title.slice(1);
+
 
             sidebarInner.querySelectorAll(".sidebar-list")[0].appendChild(link);
 

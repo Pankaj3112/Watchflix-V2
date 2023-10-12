@@ -20,7 +20,6 @@ export function sidebar() {
         }));
     
         typeLink();
-        console.log(categoryList);
     })();
 
     // getMovieData(`https://www.omdbapi.com/?apikey=${apikey}&r=json&type=series&s=abc`, function ({ Search }) {

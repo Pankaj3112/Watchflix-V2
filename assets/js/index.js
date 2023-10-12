@@ -54,6 +54,7 @@ const heroBanner = async function({Search: movieList}){
     `;
 
     let contorlItemIndex = 0;
+    console.log(movieList);
 
     for(const [index, movie] of movieList.entries()){
 
@@ -89,7 +90,7 @@ const heroBanner = async function({Search: movieList}){
 
                 <p class="banner-text">${movieDataRecieved.data.Plot}</p>
                 
-                <a href="./detail.html" class="btn">
+                <a href="./detail.html" class="btn" onclick="localStorage.setItem('movieId', '${imdbID}')">
                     <i class="fa-regular fa-circle-play fa-xl"></i>
                     <span class="span">Watch Now</span>
                 </a>
@@ -116,6 +117,7 @@ const heroBanner = async function({Search: movieList}){
 
     addHeroSlide();
     
+
     // fetch data for home page sections (top rated, upcoimg, trending)
 
     for (const {title, path} of homePageSections){
@@ -167,7 +169,7 @@ const getMovieDataCached = async function (imdbID) {
 
 const createMovieList = async function({ Search: movieList}, title){
 
-    // Fetch movie's complete data from their imdbId
+    // Fetch movie's complete data from their imdbID
 
     // one liner without using caching method-
     // const completeMovieDataList = (await Promise.all(movieList.map(async mov => 

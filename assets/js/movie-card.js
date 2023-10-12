@@ -10,7 +10,7 @@ export function createMovieCard(movie){
         Title,
         imdbRating,
         Year,                                               
-        imdbId
+        imdbID
     } = movie;
 
     const card = document.createElement("div");
@@ -27,7 +27,7 @@ export function createMovieCard(movie){
         </div>
 
         <div class="meta-list">
-        
+
             <div class="meta-item">
                 <img width="24" height="20" src="https://img.icons8.com/3d-fluency/94/star.png" loading="lazy" alt="rating"/>
                 <span class="span">${imdbRating}</span>
@@ -36,7 +36,7 @@ export function createMovieCard(movie){
             <div class="card-badge">${Year}</div>
         </div>
 
-        <a href="./detail.html" class="card-btn" title="${Title}"></a>
+        <a href="./detail.html" class="card-btn" title="${Title}" onclick="localStorage.setItem('movieId', '${imdbID}')"></a>
                     
     `;
 

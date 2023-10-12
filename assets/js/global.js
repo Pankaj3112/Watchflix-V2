@@ -18,4 +18,5 @@ addEventOnElements(searchTogglers, "click", function(){
 });
 
 
+
 // TODO: Add like button feature

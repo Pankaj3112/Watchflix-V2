@@ -829,16 +829,17 @@ body::-webkit-scrollbar{
 \*-----------------------------------*/
 
 .search-modal{
-  position: relative;
-  top: 0;
+  position: absolute;
+  top: 108px;
   left: 0;
   width: 100%;
   bottom: 0;
   background-color: var(--surface);
   padding: 50px 24px;
   overflow-y: overlay;
-  /* z-index: 2; */
+  z-index: 2;
   display: none;
+  opacity: 0.9;
 }
 
 .search-modal.active{

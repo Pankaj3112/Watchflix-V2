@@ -26,6 +26,7 @@ export function sidebar() {
     }
 
     // needs to be modified when OMDB API adds search by gene feature (DO REMEMBER to remove these curl bracates then)
+    
     // {
     // // Fetch all according to type: movie, series, episodes
     // const categoryList = {};

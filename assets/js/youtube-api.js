@@ -1,6 +1,6 @@
 'use strict';
 
-const youtubeApiKey = '111AIzaSyB5ZgefAXVff72XlnsUCOwgS4fQD94GLT4';
+const youtubeApiKey = 'AIzaSyB5ZgefAXVff72XlnsUCOwgS4fQD94GLT4';
 const youtubeUrl = `https://www.googleapis.com/youtube/v3/search?key=${youtubeApiKey}&videoCategoryId=30&part=snippet&type=video&videoType=movie&maxResults=5`;
 
 // fetch data from server and pass the result in JSON format

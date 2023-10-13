@@ -3,6 +3,7 @@
 import { sidebar } from "./sidebar.js";
 import { apikey, baseURL, getMovieData, imageBaseURL } from "./api.js";
 import { createMovieCard } from "./movie-card.js"
+import { search } from "./search.js";
 
 const pageContent = document.querySelector("[data-page-content]");
 
@@ -54,7 +55,6 @@ const heroBanner = async function({Search: movieList}){
     `;
 
     let contorlItemIndex = 0;
-    console.log(movieList);
 
     for(const [index, movie] of movieList.entries()){
 
@@ -203,7 +203,6 @@ const createMovieList = async function({ Search: movieList}, title){
             </div>
     `;
 
-    console.log(completeMovieDataList);
     for(const movie of completeMovieDataList){
         const movieCard = createMovieCard(movie);   // called from movie-card.js
         movieListElem.querySelector(".slider-inner").appendChild(movieCard);
@@ -214,3 +213,6 @@ const createMovieList = async function({ Search: movieList}, title){
 
 
 getMovieData(`https://www.omdbapi.com/?apikey=${apikey}&r=json&type=movie&s=dragon&page=1`, heroBanner);
+
+
+search();

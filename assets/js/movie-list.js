@@ -3,6 +3,7 @@
 import { sidebar } from "./sidebar.js";
 import { apikey,baseURL, getMovieData } from "./api.js";
 import { createMovieCard } from "./movie-card.js";
+import { search } from "./search.js";
 
 //  collect type name & url param from local storage
 const typeName = window.localStorage.getItem("typeName");
@@ -30,7 +31,6 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
     totalPages = Math.ceil(data.totalResults/10);
 
     document.title = `${typeName} - WatchFLix`;
-    console.log(data);
     // one liner without using caching method-
     const completeMovieDataList = (await Promise.all(movieList.map(async mov => 
         (await movieData(mov.imdbID)).data)));
@@ -38,9 +38,6 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
     // Sort movies by IMDb rating
     completeMovieDataList.sort((a, b) =>    
         (parseFloat(b.imdbRating) || 0) - (parseFloat(a.imdbRating) || 0));
-
-
-    console.log(completeMovieDataList);
 
     const movieListElem = document.createElement("section");
     movieListElem.classList.add("movie-list", "genre-list");
@@ -97,4 +94,4 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
     })
 });
 
-
+search();

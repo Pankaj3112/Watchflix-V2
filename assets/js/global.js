@@ -18,5 +18,10 @@ addEventOnElements(searchTogglers, "click", function(){
 });
 
 
+const getMovieList = function(typeName, urlParam){
+    window.localStorage.setItem("urlParam", urlParam);
+    window.localStorage.setItem("typeName", typeName);
+}
+
 
 // TODO: Add like button feature

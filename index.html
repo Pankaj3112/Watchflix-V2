@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WatchFlix</title>
     <meta name="title" content="WatchFlix">
     <meta name="description" content="WatchFlix is an app for streaming movies made by Satyam Virat">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
@@ -24,11 +25,12 @@
 
 
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <a href="./index.html" class="logo">
-            <img src="./assets/images/logo.jpg" width="150" height="30" alt="WatchFlix Home" >
+            <img src="./assets/images/logo.jpg" width="150" height="30" alt="WatchFlix Home">
         </a>
 
         <div class="search-box" data-search-box>
@@ -53,17 +55,20 @@
             <i class="fa-solid fa-ellipsis fa-spin close"></i>
 
         </button>
-        
+
     </header>
 
+    <main>
+        <!-- Sidebar -->
+        <nav class="sidebar" data-sidebar></nav>
 
-    <!-- Sidebar -->
-    <nav class="sidebar" data-sidebar></nav>
-    
-    <div class="overlay" data-overlay data-menu-toggler></div>
+        <div class="overlay" data-overlay data-menu-toggler></div>
 
-    <article class="container" data-page-content></article>
+        <article class="container" data-page-content></article>
 
-    
+
+    </main>
+
 </body>
+
 </html>

@@ -7,7 +7,7 @@ Logo:
 <a  href="https://icons8.com/icon/F2R6V3ECtTmF/documentary">Documentary</a> icon by <a href="https://icons8.com">Icons8</a>
 
 OMDb API:
-http://www.omdbapi.com/?i=tt3896198&apikey=53fb11ff
+ https://www.omdbapi.com/?i=tt3896198&apikey=53fb11ff
 
 Youtube API:
 https://console.cloud.google.com/apis/api/youtube.googleapis.com/metrics?project=watchflix-401813

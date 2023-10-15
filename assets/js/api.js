@@ -16,9 +16,9 @@ const getMovieData = async function (url, callback, opt) {
     callback(json, opt);
     return json;
 
-    fetch(url)
-        .then(res => res.json())
-        .then(data => callback(data, opt));
+    // fetch(url)
+    //     .then(res => res.json())
+    //     .then(data => callback(data, opt));
 }
 
 // Export essential variables and function

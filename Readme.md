@@ -59,7 +59,7 @@ Detailed information about movies, including trailers and suggested content, pro
   - [Documentary icon](https://icons8.com/icon/F2R6V3ECtTmF/documentary) by [Icons8](https://icons8.com).
 
 - **OMDb API:**
-  - [OMDb API](http://www.omdbapi.com/?i=tt3896198&apikey=53fb11ff) for movie data.
+  - [OMDb API]( https://www.omdbapi.com/?i=tt3896198&apikey=53fb11ff) for movie data.
 
 - **Youtube API:**
   - [Youtube API](https://console.cloud.google.com/apis/api/youtube.googleapis.com/metrics?project=watchflix-401813) for integrating official videos and trailers.

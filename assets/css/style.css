@@ -247,7 +247,15 @@ body::-webkit-scrollbar{
 }
 
 .fav-icon {
-  color: #c653bc;
+  color: lavenderblush;
+  z-index: 3;
+  cursor: pointer;
+}
+
+
+.fav-icon.active {
+  color: #ff4081; /* or any other color you find beautiful */
+  /* Additional styles for the active state */
 }
 
 /* some font awesome issue with line-height, so needed to explictiy mention this*/
@@ -682,8 +690,15 @@ body::-webkit-scrollbar{
   overflow-x: auto;
 }
 
-.slider-control::-webkit-scrollbar{
-  display: none;
+.slider-control::-webkit-scrollbar-thumb,
+.control-inner::-webkit-scrollbar-thumb{
+  /* display: none; */
+  background-color: transparent;
+}
+
+.slider-control:is(:hover, :focus-within)::-webkit-scrollbar-thumb,
+.control-inner:is(:hover, :focus-within)::-webkit-scrollbar-thumb{
+  background-color: var(--banner-background);
 }
 
 .control-inner{
@@ -714,7 +729,7 @@ body::-webkit-scrollbar{
 /* Movie List */
 
 .movie-list{
-  padding-block-start: 32px;
+  padding-block-start: 25px;
 }
 
 .movie-card{
@@ -835,11 +850,10 @@ body::-webkit-scrollbar{
   width: 100%;
   bottom: 0;
   background-color: var(--surface);
-  padding: 50px 24px;
+  padding: 30px 24px;
   overflow-y: overlay;
-  z-index: 2;
+  z-index: 4;
   display: none;
-  opacity: 0.9;
 }
 
 .search-modal.active{
@@ -857,3 +871,164 @@ body::-webkit-scrollbar{
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/* for largen then 575px screen */
+
+@media (min-width: 576px) {
+  
+  /* Home Page */
+
+  .banner-content{
+    right: auto;
+    max-width: 500px;
+  }
+
+  .slider-control{
+    left: calc(100% - 400px);
+  }
+
+  /* Detail Page */
+  .detail-content {
+    max-width: 750px;
+  }
+
+}
+
+
+/* for largen then 768px screen */
+
+@media (min-width: 768px) {
+  
+  /* Custom */
+
+  :root{
+    --fs-heading: 5.4rem;
+  }
+
+  /* Home Page */
+
+  .container{
+    padding-inline: 24px;
+  }
+
+  .slider-list{
+    margin-inline: -24px;
+  }
+
+  .search-btn{
+    display: none;
+  }
+
+  .search-box{
+    all: unset;
+    display: block;
+    width: 360px;
+  }
+
+  
+  /* Movie Detail Page */
+
+  .movie-detail{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .movie-detail .detail-box {
+    flex-grow: 1;
+  }
+
+  .movie-detail .movie-poster{
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .movie-detail .slider-list{
+    margin-inline-start: 0;
+    border-radius: var(--radius-16) 0 0 var(--radius-16);
+  }
+
+  .movie-detail .slider-inner::before{
+    display: none;
+  }
+
+}
+
+@media (min-width: 1008px) {
+
+  .banner{
+    height: 500px;
+  }
+
+  .banner-content{
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 50px;
+  }
+
+}
+
+/* for largen then 1200px screen */
+
+@media (min-width: 1200px) {
+  
+  /* Home Page */
+
+  .header {
+    padding: 28px 56px;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .menu-btn,
+  .overlay{
+    display: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+
+  .sidebar{
+    position: static;
+    visibility: visible;
+    border-block-start: 0;
+    height: calc(100vh -104px);
+  }
+
+  .sidebar.active {
+    transform: none;
+  }
+
+  .sidebar-list,
+  .sidebar-footer{
+    padding-inline: 56px;
+  }
+
+  .container{
+    height: calc(100vh -104px);
+    border-top-left-radius: var(--radius-36);
+  }
+  
+  .banner-content{
+    left: 100px;
+  }
+
+  .search-modal{
+    top: 104px;
+    padding: 60px;
+  }
+
+  /* Detail Page */
+
+  .backdrop-image{
+    border-top-left-radius: var(--radius-36);
+  }
+
+
+}
+

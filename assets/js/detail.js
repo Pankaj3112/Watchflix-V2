@@ -5,6 +5,7 @@ import { youtubeUrl, fetchYoutubeVideos } from "./youtube-api.js";
 import { sidebar } from "./sidebar.js";
 import { createMovieCard } from "./movie-card.js";
 import { search } from "./search.js";
+import { initializeFavourites, updateUI} from "./favourite-list.js";
 
 
 const movieId = window.localStorage.getItem("movieId");
@@ -337,3 +338,7 @@ const addSuggestedMovies = async function({ Search: movieList}){
 }
 
 search();
+setTimeout(() => {
+    updateUI();
+}, 1500); 
+initializeFavourites();

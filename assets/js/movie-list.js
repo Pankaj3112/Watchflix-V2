@@ -4,6 +4,7 @@ import { sidebar } from "./sidebar.js";
 import { apikey,baseURL, getMovieData } from "./api.js";
 import { createMovieCard } from "./movie-card.js";
 import { search } from "./search.js";
+import { initializeFavourites, updateUI} from "./favourite-list.js";
 
 //  collect type name & url param from local storage
 const typeName = window.localStorage.getItem("typeName");
@@ -55,6 +56,7 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
     `;
 
     // add movie card based on fetched item
+    console.log(completeMovieDataList);
 
     for(const movie of completeMovieDataList){
         const movieCard = createMovieCard(movie);
@@ -95,3 +97,7 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
 });
 
 search();
+setTimeout(() => {
+    updateUI();
+}, 1500); 
+initializeFavourites();

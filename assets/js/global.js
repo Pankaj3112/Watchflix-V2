@@ -23,5 +23,3 @@ const getMovieList = function(typeName, urlParam){
     window.localStorage.setItem("typeName", typeName);
 }
 
-
-// TODO: Add like button feature

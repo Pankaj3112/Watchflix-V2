@@ -4,6 +4,7 @@ import { sidebar } from "./sidebar.js";
 import { apikey, baseURL, getMovieData, imageBaseURL } from "./api.js";
 import { createMovieCard } from "./movie-card.js"
 import { search } from "./search.js";
+import { initializeFavourites, updateUI} from "./favourite-list.js";
 
 const pageContent = document.querySelector("[data-page-content]");
 
@@ -216,3 +217,7 @@ getMovieData(`https://www.omdbapi.com/?apikey=${apikey}&r=json&type=movie&s=drag
 
 
 search();
+setTimeout(() => {
+    updateUI();
+}, 1500); 
+initializeFavourites();

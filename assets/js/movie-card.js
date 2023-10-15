@@ -23,7 +23,7 @@ export function createMovieCard(movie){
 
         <div class="card-movie-detail">
             <h4 class="title">${Title}</h4>
-            <i class="fa-regular fa-heart fav-icon"></i>
+            <i class="fa-regular fa-heart fav-icon" data-movie-id="${imdbID}"></i>
         </div>
 
         <div class="meta-list">

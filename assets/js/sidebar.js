@@ -8,7 +8,7 @@ export function sidebar() {
 
         const sidebarBtn = document.querySelector("[data-menu-btn]");
         const sidebarTogglers = document.querySelectorAll("[data-menu-toggler]");
-        const sidebarClose = document.querySelectorAll("[data-menu-close]");
+        // const sidebarClose = document.querySelectorAll("[data-menu-close]");
         const overlay = document.querySelector("[data-overlay]");
 
         addEventOnElements(sidebarTogglers, "click", function(){
@@ -17,11 +17,11 @@ export function sidebar() {
             overlay.classList.toggle("active");
         });
 
-        addEventOnElements(sidebarClose, "click", function(){
-            sidebar.classList.remove("active");
-            sidebarBtn.classList.remove("active");
-            overlay.classList.remove("active");
-        });
+        // addEventOnElements(sidebarClose, "click", function(){
+        //     sidebar.classList.remove("active");
+        //     sidebarBtn.classList.remove("active");
+        //     overlay.classList.remove("active");
+        // });
 
     }
 
@@ -75,7 +75,14 @@ export function sidebar() {
             <!-- removed it coz adding a episode of hardcoded movie id like this need code modification in movie-list.js file || if needed in future, i shall do it -->
             <!-- <a href="./movie-list.html" data-menu-close class="sidebar-link" onclick='getMovieList("Episodes","i=tt0277535&season=1")'>Episodes</a> -->
         </div>
+        <div class="sidebar-list">
+            <p class="title">
+                <a href="./favourite.html">Favourites</a>
+            </p>
 
+            <!-- removed it coz adding a episode of hardcoded movie id like this need code modification in movie-list.js file || if needed in future, i shall do it -->
+            <!-- <a href="./movie-list.html" data-menu-close class="sidebar-link" onclick='getMovieList("Episodes","i=tt0277535&season=1")'>Episodes</a> -->
+        </div>
         <div class="sidebar-footer">
             <p class="copyright">
                 Copyright 2023 

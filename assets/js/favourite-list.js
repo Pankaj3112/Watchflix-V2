@@ -26,7 +26,6 @@ function getFavourites() {
     return storedFavourites ? JSON.parse(storedFavourites) : [];
 }
 
-
 // Function to update the UI based on the favorite status
 export function updateUI() {
     const favIcons = document.querySelectorAll('.fav-icon');
@@ -57,8 +56,10 @@ export function initializeFavourites() {
     updateUI();
 }
 
+// Event listener to update UI when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Adding a delay to allow time for asynchronous operations
     setTimeout(() => {
         updateUI();
-    }, 1000); 
+    }, 1000);
 });

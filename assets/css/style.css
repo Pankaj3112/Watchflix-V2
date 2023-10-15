@@ -259,7 +259,7 @@ body::-webkit-scrollbar{
 }
 
 /* some font awesome issue with line-height, so needed to explictiy mention this*/
-.banner i, .movie-list i{
+.fav-icon {
   line-height: 1 !important;
   font-size: 1.8em !important;
 }
@@ -591,6 +591,8 @@ body::-webkit-scrollbar{
   opacity: 0.5;
   pointer-events: all;
 }
+
+
 /*-----------------------------------*\
   #HOME PAGE
 \*-----------------------------------*/
@@ -895,7 +897,7 @@ body::-webkit-scrollbar{
 }
 
 
-/* for largen then 768px screen */
+/* for larger then 768px screen */
 
 @media (min-width: 768px) {
   

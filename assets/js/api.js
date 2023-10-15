@@ -4,7 +4,7 @@
 const apikey = '53fb11ff';
 
 // Base URL for fetching movie data by ID
-const baseURL = "http://www.omdbapi.com/?r=json";
+const baseURL = "https://www.omdbapi.com/?r=json";
 
 // Base URL for fetching movie images
 const imageBaseURL = 'https://img.omdbapi.com/?';

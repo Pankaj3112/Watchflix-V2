@@ -2,6 +2,7 @@
 
 // Importing necessary modules and functions
 import { apikey, getMovieData, baseURL } from "./api.js";
+import { updateUI } from "./favourite-list.js";
 import { createMovieCard } from "./movie-card.js";
 
 // Function to handle search functionality
@@ -78,6 +79,7 @@ export function search() {
                     searchResultModal.querySelector(".grid-list").appendChild(movieCard);
                 }
 
+				updateUI();
             });
 
         }, 400);

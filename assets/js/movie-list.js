@@ -69,6 +69,8 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
     // Append the movie list to the page content
     pageContent.appendChild(movieListElem);
 
+	updateUI();
+
     // Load more button functionality
     document.querySelector("[data-load-more]").addEventListener("click", function () {
         if (currentPage >= totalPages) {
@@ -97,6 +99,7 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
             }
         });
     });
+
 });
 
 // Initialize search and favorites functionality

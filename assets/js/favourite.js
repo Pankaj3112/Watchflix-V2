@@ -42,6 +42,8 @@ for (const movieId of favouritesList) {
 // Append the favorites section to the page content
 pageContent.appendChild(movieListElem);
 
+updateUI();
+
 // Initialize search functionality, update UI, and handle favorites
 search();
 updateUI();

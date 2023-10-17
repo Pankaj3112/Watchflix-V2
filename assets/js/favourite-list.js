@@ -28,7 +28,7 @@ function getFavourites() {
 
 // Function to update the UI based on the favorite status
 export function updateUI() {
-    const favIcons = document.querySelectorAll('.fav-icon');
+    const favIcons = document.querySelectorAll('.fav-icon');	
     const favourites = getFavourites();
 
     favIcons.forEach((icon) => {

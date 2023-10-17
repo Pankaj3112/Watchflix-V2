@@ -35,9 +35,14 @@ export function updateUI() {
         const movieId = icon.getAttribute('data-movie-id');
         if (favourites.includes(movieId)) {
             icon.classList.add('active');
+			icon.classList.add('fa-solid');
+			icon.classList.remove('fa-regular');
         } else {
             icon.classList.remove('active');
+			icon.classList.add('fa-regular');
+			icon.classList.remove('fa-solid');
         }
+
     });
 }
 
@@ -57,9 +62,9 @@ export function initializeFavourites() {
 }
 
 // Event listener to update UI when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Adding a delay to allow time for asynchronous operations
-    setTimeout(() => {
-        updateUI();
-    }, 1000);
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Adding a delay to allow time for asynchronous operations
+//     setTimeout(() => {
+//         updateUI();
+//     }, 1000);
+// });

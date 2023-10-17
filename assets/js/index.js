@@ -181,6 +181,9 @@ const createMovieList = async function({ Search: movieList}, title){
     }
 
     pageContent.appendChild(movieListElem);
+
+	//wherever you call createMovieCard use updateUi
+	updateUI();
 }
 
 // Fetching movie data for hero banner

@@ -31,7 +31,7 @@ movieListElem.innerHTML = `
 
 // Fetch data for each favorite movie and create a movie card for display
 for (const movieId of favouritesList) {
-    getMovieData(`${baseURL}&apikey=${apikey}&i=${movieId}`, function (movie) {
+    await getMovieData(`${baseURL}&apikey=${apikey}&i=${movieId}`, function (movie) {
         const movieCard = createMovieCard(movie);
 
         // Append the movie card to the grid list
@@ -46,5 +46,4 @@ updateUI();
 
 // Initialize search functionality, update UI, and handle favorites
 search();
-updateUI();
 initializeFavourites();

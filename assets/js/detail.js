@@ -162,15 +162,14 @@ const addSuggestedMovies = async function ({ Search: movieList }) {
 
     // Appending the suggested movie list section to the main content area
     pageContent.appendChild(movieListElem);
+    
+    updateUI();
 }
 
 // Initiating search functionality
 search();
 
-// Delayed update of UI to allow time for asynchronous operations
-setTimeout(() => {
-    updateUI();
-}, 1500);
+
 
 // Initializing the favourites list
 initializeFavourites();

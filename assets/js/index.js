@@ -192,10 +192,5 @@ getMovieData(`https://www.omdbapi.com/?apikey=${apikey}&r=json&type=movie&s=drag
 // Initializing search functionality
 search();
 
-// Updating UI after a delay
-setTimeout(() => {
-    updateUI();
-}, 2000); 
-
 // Initializing favorites
 initializeFavourites();

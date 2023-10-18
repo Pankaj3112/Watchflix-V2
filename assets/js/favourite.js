@@ -43,5 +43,4 @@ pageContent.appendChild(movieListElem);
 
 // Initialize search functionality, update UI, and handle favorites
 search();
-updateUI();
 initializeFavourites();

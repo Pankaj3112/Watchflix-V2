@@ -9,9 +9,13 @@ WatchFlix is a web application that allows users to explore and discover movies 
 - **HTML**
 - **CSS**
 - **Vanilla JS**
-- **Postman**
 - **Youtube API**
 - **OMDB API**
+
+## Tools
+- **Postman**
+- **VSCode**
+
 
 ## Features
 

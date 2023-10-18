@@ -27,9 +27,8 @@ export function sidebar() {
 
     }
 
-    // needs to be modified when OMDB API adds search by gene feature (DO REMEMBER to remove these curl bracates then)
+    // needs to be modified when OMDB API adds search by gene feature
     /* 
-    {
     // Fetch all according to type: movie, series, episodes
     const categoryList = {};
     const category = ['movie', 'series', 'episode'];
@@ -61,7 +60,6 @@ export function sidebar() {
             sidebarInner.querySelectorAll(".sidebar-list")[0].appendChild(link);
         }
     }
-    } 
     */
 
     // Creating the inner content of the sidebar

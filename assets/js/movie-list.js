@@ -97,6 +97,7 @@ getMovieData(`${baseURL}&apikey=${apikey}&${urlParam}&page=${currentPage}`, asyn
                 const movieCard = createMovieCard(movie);
                 movieListElem.querySelector(".grid-list").appendChild(movieCard);
             }
+            updateUI();
         });
     });
 
